@@ -403,7 +403,7 @@ function fileContentSize(content) {
 function freeSpace(used) {
     // let free = 0;
     const diskSize = 8190;
-    return diskSize > used ? 'Diske like vietos: ' + diskSize - used : 'Diske nera laisvos vietos';
+    return diskSize > used ? 'Diske like vietos: ' + diskSize - used : 'Diske nera laisvos vietos.';
 }
 
 
@@ -427,10 +427,8 @@ function useSpace(filesList, original = true) {
 
     }
 
-
-
     if (original) {
-        return `Diske uzimta vietos: ${spaceUsed}. `;
+        return spaceUsed;
     } else {
         return spaceUsed;
     }
@@ -440,6 +438,7 @@ function useSpace(filesList, original = true) {
 // console.log(filesB);
 const filesC = useSpace(C);
 console.log(filesC);
+
 // const filesD = useSpace(D);
 // console.log(filesD);
 
